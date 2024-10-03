@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>Add a dog</title>
+    </head>
+    <body>
+        <header>
+            <h1>Add a new dog</h1>
+        </header>
+
+        <form action="/api/add-dog" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+            <br />
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="breed" required />
+            <br />
+            <label for="desc">Description</label>
+            <input type="text" id="desc" name="desc" required />
+            <br />
+            <label for="img">Image URL</label>
+            <input type="url" id="img" name="img" required />
+            <button type="submit">Add dog</button>
+        </form>
+    </body>
+</html>

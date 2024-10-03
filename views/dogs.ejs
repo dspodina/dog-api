@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Dogs API</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dog breed</h1>
+        <%- include("./includes/nav.ejs", {token : token})%>
+    </header>
+
+<div class="dog-container">
+    <% dogs.forEach((dog) => { %>
+        <div class="dog">
+            <div>
+                <img src="<%= dog.img %>" alt="<%= dog.name %>">
+            </div>
+            <div class="dogs-desc">
+                <h2><%= dog.breed %></h2>
+                <p>My name is <%= dog.name%></p>
+                <button>
+                    <a href="/api/dogs/<%= dog.id %>">Details</a>
+                </button>
+            </div>
+        </div>
+        <% }); %>
+</div>
+</body>
+
+</html>

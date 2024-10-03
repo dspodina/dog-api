@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>Dogs API</title>
+    </head>
+    <header>
+        <h1>Breed: <%=dog.breed%></h1>
+    </header>
+    <body>
+        <div class="dog-container">
+            <div class="dog">
+                <div>
+                    <img src="<%=dog.img%>" alt="<%=dog.name%>" />
+                </div>
+                <div class="dog-desc">
+                    <h2>My name is <%=dog.name%></h2>
+                    <p><%=dog.desc%></p>
+                    <button>
+                        <a href="/api/dogs">See all dogs</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
